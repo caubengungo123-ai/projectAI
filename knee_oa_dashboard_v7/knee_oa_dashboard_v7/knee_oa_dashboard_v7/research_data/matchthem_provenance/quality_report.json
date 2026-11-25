@@ -1,0 +1,68 @@
+{
+  "source_name": "MatchThem osteoarthritis; OAI-derived WITH CHANGES",
+  "original_oai_data_downloaded": false,
+  "source_package_version": "1.2.1",
+  "source_commit": "f9718f637c34275d1412ac0bd24e4360e6c2ddf4",
+  "rows_total": 2585,
+  "source_columns": 7,
+  "labeled_rows": 2392,
+  "unlabeled_rows": 193,
+  "target_counts": {
+    "0": 1197,
+    "1": 1195,
+    "missing": 193
+  },
+  "missing_all": {
+    "AGE": 0,
+    "SEX": 0,
+    "BMI": 1,
+    "RAC": 2,
+    "SMK": 28,
+    "OSP": 0,
+    "KOA": 193
+  },
+  "missing_labeled": {
+    "record_key": 0,
+    "age": 0,
+    "sex_code_unverified": 0,
+    "bmi": 1,
+    "race_code": 1,
+    "smoking": 27,
+    "osteoporosis_baseline": 0,
+    "koa_followup": 0
+  },
+  "observed_values": {
+    "SEX": [
+      1,
+      2
+    ],
+    "RAC": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "SMK": [
+      0,
+      1
+    ],
+    "OSP": [
+      0,
+      1
+    ],
+    "KOA": [
+      0,
+      1
+    ]
+  },
+  "repeated_full_feature_target_combinations": 68,
+  "synthetic_rows_generated": 0,
+  "patient_values_imputed": 0,
+  "limitations": [
+    "Modified derivative, not original OAI cohort.",
+    "SEX coding mismatch: observed 1/2, documentation states 0/1.",
+    "Follow-up horizon and precise outcome ascertainment not established.",
+    "No verified OAI participant identifiers or knee side.",
+    "Class balance here is not an estimate of population prevalence."
+  ]
+}

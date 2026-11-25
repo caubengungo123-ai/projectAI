@@ -1,0 +1,240 @@
+{
+  "groups": {
+    "all": {
+      "label": "Tất cả nhóm",
+      "n": 1410,
+      "age": {
+        "valid_n": 1410,
+        "missing_n": 0,
+        "median": 68.0,
+        "min": 35.0,
+        "max": 91.0,
+        "edges": [
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "hist": [
+          5,
+          8,
+          28,
+          60,
+          147,
+          198,
+          333,
+          282,
+          208,
+          111,
+          27,
+          3
+        ]
+      },
+      "firstline": {
+        "labels": [
+          "Tập luyện và giáo dục",
+          "Tập luyện hoặc giáo dục",
+          "Không nhận hình thức nào"
+        ],
+        "counts": [
+          1358,
+          32,
+          20
+        ],
+        "valid_n": 1410,
+        "missing_n": 0
+      }
+    },
+    "1": {
+      "label": "Chương trình GLA:D",
+      "n": 1318,
+      "age": {
+        "valid_n": 1318,
+        "missing_n": 0,
+        "median": 69.0,
+        "min": 36.0,
+        "max": 91.0,
+        "edges": [
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "hist": [
+          2,
+          6,
+          25,
+          50,
+          135,
+          180,
+          317,
+          276,
+          196,
+          105,
+          24,
+          2
+        ]
+      },
+      "firstline": {
+        "labels": [
+          "Tập luyện và giáo dục",
+          "Tập luyện hoặc giáo dục",
+          "Không nhận hình thức nào"
+        ],
+        "counts": [
+          1318,
+          0,
+          0
+        ],
+        "valid_n": 1318,
+        "missing_n": 0
+      }
+    },
+    "2": {
+      "label": "Nhóm thay khớp gối",
+      "n": 55,
+      "age": {
+        "valid_n": 55,
+        "missing_n": 0,
+        "median": 65.0,
+        "min": 44.0,
+        "max": 91.0,
+        "edges": [
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "hist": [
+          0,
+          1,
+          0,
+          4,
+          6,
+          15,
+          11,
+          3,
+          7,
+          5,
+          2,
+          1
+        ]
+      },
+      "firstline": {
+        "labels": [
+          "Tập luyện và giáo dục",
+          "Tập luyện hoặc giáo dục",
+          "Không nhận hình thức nào"
+        ],
+        "counts": [
+          25,
+          20,
+          10
+        ],
+        "valid_n": 55,
+        "missing_n": 0
+      }
+    },
+    "3": {
+      "label": "Chăm sóc bảo tồn cá thể",
+      "n": 37,
+      "age": {
+        "valid_n": 37,
+        "missing_n": 0,
+        "median": 58.0,
+        "min": 35.0,
+        "max": 85.0,
+        "edges": [
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "hist": [
+          3,
+          1,
+          3,
+          6,
+          6,
+          3,
+          5,
+          3,
+          5,
+          1,
+          1,
+          0
+        ]
+      },
+      "firstline": {
+        "labels": [
+          "Tập luyện và giáo dục",
+          "Tập luyện hoặc giáo dục",
+          "Không nhận hình thức nào"
+        ],
+        "counts": [
+          15,
+          12,
+          10
+        ],
+        "valid_n": 37,
+        "missing_n": 0
+      }
+    }
+  },
+  "care_notes": [
+    "Khảo sát cắt ngang tại Thụy Sĩ ở người đã được chẩn đoán thoái hóa khớp gối.",
+    "Bộ dữ liệu nguồn có 1.410 dòng, 139 cột và không thu thập BMI.",
+    "Khoảng thời gian từ triệu chứng tới chẩn đoán có 54 giá trị âm và 67 ô thiếu. Biến này chưa dùng cho biểu đồ.",
+    "Giá trị None là không nhận cả hai hình thức tập luyện và giáo dục; giữ là một nhóm có nghĩa."
+  ],
+  "bone_density": {
+    "labels": [
+      "Bình thường",
+      "Thiểu xương",
+      "Loãng xương"
+    ],
+    "counts": [
+      51,
+      12,
+      9
+    ],
+    "valid_n": 72,
+    "missing_n": 0
+  }
+}

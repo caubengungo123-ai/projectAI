@@ -1,0 +1,48 @@
+{
+  "protocol_id": "incident_rkoa_48m_v1",
+  "source_id": "OAI_RELEASE_TO_CONFIRM",
+  "cohort_id": "OAI",
+  "baseline_visit_id": "V00",
+  "followup_visit_id": "V06",
+  "tables": {
+    "clinical_baseline": {
+      "path": "AllClinical00_export.csv",
+      "delimiter": ",",
+      "columns": {
+        "participant_id": "CONFIRM_CLINICAL_ID",
+        "age_baseline": "CONFIRM_BASELINE_AGE",
+        "bmi_baseline": "CONFIRM_BASELINE_BMI"
+      }
+    },
+    "xray_baseline": {
+      "path": "kxr_sq_bu00_export.csv",
+      "delimiter": ",",
+      "columns": {
+        "participant_id": "CONFIRM_XRAY_ID",
+        "knee_side": "CONFIRM_XRAY_SIDE",
+        "kl_baseline": "CONFIRM_BASELINE_KL"
+      }
+    },
+    "xray_followup": {
+      "path": "kxr_sq_bu06_reviewed.csv",
+      "delimiter": ",",
+      "columns": {
+        "participant_id": "CONFIRM_XRAY_ID",
+        "knee_side": "CONFIRM_XRAY_SIDE",
+        "kl_followup": "CONFIRM_FOLLOWUP_KL",
+        "outcome_verified": "outcome_verified"
+      }
+    },
+    "followup_status": {
+      "path": "oai_followup_status.csv",
+      "delimiter": ",",
+      "columns": {
+        "participant_id": "participant_id",
+        "knee_side": "knee_side",
+        "followup_months": "followup_months",
+        "prior_knee_replacement": "prior_knee_replacement",
+        "knee_replacement_before_followup": "knee_replacement_before_followup"
+      }
+    }
+  }
+}

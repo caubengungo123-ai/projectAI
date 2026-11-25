@@ -1,0 +1,76 @@
+{
+  "matchthem": {
+    "n": 2585,
+    "missing": {
+      "bmi": 1,
+      "rac": 2,
+      "smk": 28,
+      "koa": 193,
+      "bmi_clean": 1
+    },
+    "quality_notes": [
+      "Dữ liệu dẫn xuất OAI có chỉnh sửa; nhãn 0 = at risk, nhãn 1 = diagnosed.",
+      "SEX chưa xác minh cách mã hóa; không dùng trong mô hình.",
+      "Không gộp với OAI hoặc các bản OAI khác khi chưa kiểm tra trùng người.",
+      "Mô hình hiện chỉ học từ 2.392 hồ sơ có nhãn trong nguồn này."
+    ],
+    "csv_sha256": "050b3ccada89f18d9e4d8cce791c2c2f5880ed6d357209ab5d3be785d96a6e15"
+  },
+  "clinical72": {
+    "n": 72,
+    "missing": {
+      "smoker": 1,
+      "local": 2,
+      "chprot": 2,
+      "infiltr": 3,
+      "cv": 3,
+      "wbc": 11,
+      "n_l": 11,
+      "mono": 11,
+      "siri": 11,
+      "hgb": 11,
+      "egfr": 10,
+      "plt": 11,
+      "tsh": 13,
+      "uric": 12,
+      "bmi_clean": 1
+    },
+    "quality_notes": [
+      "Loại 2 dòng lặp tiêu đề/chú giải; giữ đủ 72 dòng có tuổi dạng số.",
+      "Bỏ PATIENT ID khỏi bản nghiên cứu được chia sẻ; source_record_key chỉ là số dòng nội bộ.",
+      "1 BMI bằng 0 được giữ trong cột bmi, để trống trong bmi_clean.",
+      "RAD SCORE có 1.5, 2.5, 3.5; không làm tròn hoặc đổi thành nhãn KOA 0/1.",
+      "OBEZ có mã 2 dù chú giải chỉ nêu 0/1; DIS HIST có giá trị lớn hơn 1 dù chú giải nêu nhị phân. Giữ mã gốc, chưa diễn giải.",
+      "Dữ liệu cắt ngang ở người đã mắc OA; không có cùng kết cục theo dõi với MatchThem."
+    ],
+    "csv_sha256": "9dde2b64050a8a1a9578a80c531406ad6ccedd58a9b4aa2b36ae0ae36ba30852"
+  },
+  "rct247": {
+    "n": 247,
+    "missing": {
+      "ppt_post": 1
+    },
+    "quality_notes": [
+      "247 dòng trong file thử nghiệm; chưa có mã người tham gia để kiểm chứng độc lập theo người.",
+      "Không tự gán ý nghĩa nhóm Group, giới tính hoặc bên gối khi chưa có protocol/codebook.",
+      "Chỉ quan sát độ KL 1 và 2; không có cùng nhãn koa_followup 0/1.",
+      "Các cột Pre/Post thuộc bối cảnh can thiệp; không dùng Post để dự đoán kết quả ban đầu.",
+      "Chưa đủ mô tả protocol để suy luận hiệu quả điều trị hoặc tính tỷ lệ mắc bệnh."
+    ],
+    "csv_sha256": "1b40d01338662d818affc24824cc3e539d0afabf394ff3042d63118e52ba7367"
+  },
+  "carepathways": {
+    "n": 1410,
+    "missing": {
+      "duration_sy_to_diag": 67
+    },
+    "negative_duration_sy_to_diag": 54,
+    "quality_notes": [
+      "Khảo sát cắt ngang tại Thụy Sĩ ở người đã được chẩn đoán thoái hóa khớp gối.",
+      "Bộ dữ liệu nguồn có 1.410 dòng, 139 cột và không thu thập BMI.",
+      "Khoảng thời gian từ triệu chứng tới chẩn đoán có 54 giá trị âm và 67 ô thiếu. Biến này chưa dùng cho biểu đồ.",
+      "Giá trị None là không nhận cả hai hình thức tập luyện và giáo dục; giữ là một nhóm có nghĩa."
+    ],
+    "csv_sha256": "59cccb30b0bf31047084c40158aebe9570aaacbcdc8b4a8542feb9ef1e8ded6b"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_id": "incident_rkoa_48m_v1",
+  "status": "research_preparation_no_trained_early_warning_model",
+  "unit": "one knee per participant at one baseline and one follow-up",
+  "population": "adult knees with baseline KL 0 or 1 and no prior knee replacement",
+  "horizon_months": 48,
+  "allowed_visit_window_months": [
+    45,
+    51
+  ],
+  "target_1": "KL 2, 3 or 4 at the selected 48-month follow-up",
+  "target_0": "KL 0 or 1 at the selected 48-month follow-up",
+  "excluded": "missing/unverified outcome, prior or interval knee replacement, other follow-up times",
+  "interpretation": "radiographic status at the specified visit; not first onset time or symptomatic OA",
+  "features": [
+    "age_baseline",
+    "bmi_baseline",
+    "smoking_baseline",
+    "osteoporosis_baseline",
+    "knee_injury_history_baseline",
+    "pain_nrs_baseline"
+  ],
+  "split_unit": "cohort_id + participant_id, shared across all source copies and both knees",
+  "deployment": "not deployed; research protocol needs clinical review and independent evaluation"
+}

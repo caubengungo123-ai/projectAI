@@ -1,0 +1,20 @@
+{
+  "protocol_id": "incident_rkoa_48m_v1",
+  "is_synthetic": false,
+  "sources": [
+    {
+      "source_id": "REPLACE_WITH_SOURCE",
+      "cohort_id": "REPLACE_WITH_ORIGINAL_COHORT",
+      "source_url": "",
+      "version": "",
+      "license_or_access_terms": "",
+      "codebook_reference": "",
+      "permission_confirmed": false,
+      "codebook_confirmed": false,
+      "participant_namespace_confirmed": false,
+      "predictor_timing_confirmed": false,
+      "outcome_definition_confirmed": false,
+      "real_observations_confirmed": false
+    }
+  ]
+}

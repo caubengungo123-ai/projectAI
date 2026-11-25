@@ -1,0 +1,74 @@
+[
+  {
+    "source": "AGE",
+    "column": "age",
+    "role": "feature",
+    "meaning_vi": "Tuổi",
+    "unit": "năm",
+    "coding": "Số nguyên theo nguồn",
+    "note": "Không tự quy đổi sang tuổi tại một năm lịch mới."
+  },
+  {
+    "source": "SEX",
+    "column": "sex_code_unverified",
+    "role": "feature_pending_verification",
+    "meaning_vi": "Mã giới tính chưa xác minh cách diễn giải",
+    "unit": null,
+    "coding": "Giữ nguyên 1 và 2 trong file",
+    "note": "Tài liệu MatchThem ghi 0=nữ, 1=nam nhưng file chứa 1/2. Không ánh xạ nam/nữ theo suy đoán; tạm loại khỏi mô hình có giao diện giới tính."
+  },
+  {
+    "source": "BMI",
+    "column": "bmi",
+    "role": "feature",
+    "meaning_vi": "Chỉ số khối cơ thể ước tính",
+    "unit": "kg/m²",
+    "coding": "Số thực",
+    "note": "Có giá trị thiếu; xử lý trong pipeline sau khi chia tập."
+  },
+  {
+    "source": "RAC",
+    "column": "race_code",
+    "role": "optional_feature",
+    "meaning_vi": "Nhóm chủng tộc theo tài liệu nguồn",
+    "unit": null,
+    "coding": "0=khác; 1=Caucasian; 2=African American; 3=Asian",
+    "note": "Giữ là biến phân loại. Cần cân nhắc tính phù hợp với dân số mục tiêu; không coi đây là thứ tự."
+  },
+  {
+    "source": "SMK",
+    "column": "smoking",
+    "role": "feature",
+    "meaning_vi": "Tình trạng hút thuốc",
+    "unit": null,
+    "coding": "0=không hút; 1=hút thuốc",
+    "note": "Có giá trị thiếu."
+  },
+  {
+    "source": "OSP",
+    "column": "osteoporosis_baseline",
+    "role": "feature",
+    "meaning_vi": "Loãng xương tại thời điểm ban đầu",
+    "unit": null,
+    "coding": "0=âm tính; 1=dương tính",
+    "note": "Theo mô tả MatchThem."
+  },
+  {
+    "source": "KOA",
+    "column": "koa_followup",
+    "role": "target",
+    "meaning_vi": "Tình trạng thoái hóa khớp gối tại lần theo dõi",
+    "unit": null,
+    "coding": "0=at risk; 1=diagnosed theo tài liệu nguồn",
+    "note": "Không suy diễn 0 là chắc chắn không mắc bệnh. Chưa xác minh mốc thời gian theo dõi và tiêu chuẩn chẩn đoán chi tiết; không quảng bá thành nguy cơ 12/24/48 tháng."
+  },
+  {
+    "source": null,
+    "column": "record_key",
+    "role": "metadata_exclude_from_features",
+    "meaning_vi": "Khóa nội bộ do quá trình chuyển đổi tạo",
+    "unit": null,
+    "coding": "MT_0001 ... MT_2585",
+    "note": "Không phải mã người tham gia OAI. Không dùng để nối với OAI gốc."
+  }
+]

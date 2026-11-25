@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-11-22",
+  "registry": [
+    {
+      "id": "matchthem",
+      "title": "MatchThem · dữ liệu mô hình hiện tại",
+      "status": "Đã có dữ liệu",
+      "rows": 2585,
+      "purpose": "Mô hình hiện tại và thống kê",
+      "url": "https://search.r-project.org/CRAN/refmans/MatchThem/html/osteoarthritis.html",
+      "doi": null,
+      "cohort_family": "OAI-derived-modified",
+      "license": "Theo giấy phép gói MatchThem và nguồn gốc; bản dẫn xuất có chỉnh sửa.",
+      "citation": "Pishgar et al. MatchThem, osteoarthritis dataset, version 1.2.1. See original project provenance.",
+      "merge_decision": "Chỉ nguồn này dùng cho mô hình hiện tại; giữ nguyên cách chia train/test.",
+      "checked_date": "2026-11-11",
+      "version": null
+    },
+    {
+      "id": "clinical72",
+      "title": "Knee OA 72 · lâm sàng và xét nghiệm",
+      "status": "Đã tải và kiểm tra",
+      "rows": 72,
+      "purpose": "Khám phá dữ liệu lâm sàng và chất lượng",
+      "url": "https://data.mendeley.com/datasets/m5b9hfbkk8/1",
+      "doi": "10.17632/m5b9hfbkk8.1",
+      "cohort_family": "Nagy-clinical-72",
+      "license": "CC BY 4.0",
+      "citation": "Nagy, Előd Ernő; Nagy-Finna, Csilla (2026). Knee_OA_72_data_2026. Mendeley Data, V1. doi:10.17632/m5b9hfbkk8.1.",
+      "merge_decision": "Chưa gộp huấn luyện: người đã mắc bệnh, kết cục và thời điểm khác nguồn hiện tại.",
+      "checked_date": "2026-11-11",
+      "version": 1,
+      "original_file": "Data_Knee_OA_72.xlsx",
+      "original_sha256": "accfc802e88817dd75fe3fc7bea65c87b83a0ddbff9012c7fef9c056d97cdd22",
+      "transformations": [
+        "Loại 2 dòng lặp tiêu đề/chú giải; giữ đủ 72 dòng có tuổi dạng số.",
+        "Bỏ PATIENT ID khỏi bản nghiên cứu được chia sẻ; source_record_key chỉ là số dòng nội bộ.",
+        "1 BMI bằng 0 được giữ trong cột bmi, để trống trong bmi_clean.",
+        "RAD SCORE có 1.5, 2.5, 3.5; không làm tròn hoặc đổi thành nhãn KOA 0/1.",
+        "OBEZ có mã 2 dù chú giải chỉ nêu 0/1; DIS HIST có giá trị lớn hơn 1 dù chú giải nêu nhị phân. Giữ mã gốc, chưa diễn giải.",
+        "Dữ liệu cắt ngang ở người đã mắc OA; không có cùng kết cục theo dõi với MatchThem."
+      ]
+    },
+    {
+      "id": "rct247",
+      "title": "Knee OA RCT · 247 hồ sơ",
+      "status": "Đã tải và kiểm tra",
+      "rows": 247,
+      "purpose": "Khám phá tuổi, BMI, KL và các thang đo ban đầu",
+      "url": "https://data.mendeley.com/datasets/skf2mxd5h8/1",
+      "doi": "10.17632/skf2mxd5h8.1",
+      "cohort_family": "Hossain-RCT",
+      "license": "CC BY 4.0",
+      "citation": "Hossain, Kazi Md Azman (2026). Knee OA Dataset. Mendeley Data, V1. doi:10.17632/skf2mxd5h8.1.",
+      "merge_decision": "Chưa gộp huấn luyện: dữ liệu thử nghiệm Pre/Post, thiếu các đầu vào và nhãn tương thích.",
+      "checked_date": "2026-11-11",
+      "version": 1,
+      "original_file": "Knee OA Dataset.xls",
+      "original_sha256": "dd742ad6f1db574937bff073db5fbea12ecaa5e44d63c8fe4c7480270ed6e470",
+      "transformations": [
+        "247 dòng trong file thử nghiệm; chưa có mã người tham gia để kiểm chứng độc lập theo người.",
+        "Không tự gán ý nghĩa nhóm Group, giới tính hoặc bên gối khi chưa có protocol/codebook.",
+        "Chỉ quan sát độ KL 1 và 2; không có cùng nhãn koa_followup 0/1.",
+        "Các cột Pre/Post thuộc bối cảnh can thiệp; không dùng Post để dự đoán kết quả ban đầu.",
+        "Chưa đủ mô tả protocol để suy luận hiệu quả điều trị hoặc tính tỷ lệ mắc bệnh."
+      ]
+    },
+    {
+      "id": "carepathways",
+      "title": "KOA Care Pathways · Thụy Sĩ",
+      "status": "Đã có dữ liệu",
+      "rows": 1410,
+      "purpose": "Khảo sát quá trình chẩn đoán và chăm sóc đã báo cáo",
+      "url": "https://zenodo.org/records/22692421",
+      "doi": "10.5281/zenodo.22692421",
+      "cohort_family": "KOA-Care-Pathways-CH",
+      "license": "CC BY 4.0 · https://creativecommons.org/licenses/by/4.0/",
+      "citation": "Moetteli-Graf, C., Neuner-Jehle, S., & Niedermann, K. (2026). Dataset for “Patient reported care pathways reveal gaps in knee osteoarthritis care in Switzerland” (v2). Zenodo. https://doi.org/10.5281/zenodo.22692421",
+      "merge_decision": "Khảo sát cắt ngang ở người đã được chẩn đoán. Dùng mô tả chăm sóc, không dùng huấn luyện dự báo 48 tháng.",
+      "checked_date": "2026-11-22",
+      "version": "2",
+      "original_file": "KOA_carepathway_cleandata.csv",
+      "original_sha256": "626291072f0cdd9bf0d06d1320c7cb9d5ce81f60c1e1fe53c12fdfb3a64e44b4",
+      "download_bytes": 443340
+    },
+    {
+      "id": "oai",
+      "title": "Osteoarthritis Initiative · OAI gốc",
+      "status": "Cần xin quyền truy cập",
+      "rows": null,
+      "purpose": "Ưu tiên cho nghiên cứu dự báo theo thời gian",
+      "url": "https://nda.nih.gov/oai",
+      "doi": null,
+      "cohort_family": "OAI",
+      "license": "Theo Data Use Agreement của OAI/NDA.",
+      "citation": "Osteoarthritis Initiative, NIH/NDA. Access instructions: https://www.oaiknowledgebase.com/about/FAQs/",
+      "merge_decision": "Cần ID người, thời điểm ban đầu, kết cục theo dõi; tránh trùng với dữ liệu dẫn xuất OAI.",
+      "checked_date": "2026-11-11",
+      "version": null
+    },
+    {
+      "id": "most",
+      "title": "Multicenter Osteoarthritis Study · MOST",
+      "status": "Cần xin quyền truy cập",
+      "rows": null,
+      "purpose": "Nguồn nghiên cứu dọc và kiểm chứng ngoài OAI",
+      "url": "https://agingresearchbiobank.nia.nih.gov/studies/most/details",
+      "doi": null,
+      "cohort_family": "MOST",
+      "license": "Controlled access; theo thỏa thuận NIA, không thương mại.",
+      "citation": "Multicenter Osteoarthritis Study, NIA AgingResearchBiobank.",
+      "merge_decision": "Cần giảng viên/PI hoặc senior researcher đứng đơn; chưa tải hồ sơ và chưa dùng trong mô hình.",
+      "checked_date": "2026-11-11",
+      "version": null
+    },
+    {
+      "id": "xray_oai",
+      "title": "Knee Osteoarthritis Severity Grading · ảnh X-quang",
+      "status": "Mới kiểm tra mô tả",
+      "rows": null,
+      "purpose": "Mở rộng phân tích ảnh bằng mô hình riêng",
+      "url": "https://data.mendeley.com/datasets/56rmx5bjcr/1",
+      "doi": "10.17632/56rmx5bjcr.1",
+      "cohort_family": "OAI",
+      "license": "CC BY 4.0",
+      "citation": "Chen, Pingjun (2018). Knee Osteoarthritis Severity Grading Dataset. Mendeley Data, V1. doi:10.17632/56rmx5bjcr.1.",
+      "download_bytes": 7171571746,
+      "merge_decision": "Chưa tải gói ảnh khoảng 7,17 GB. Ảnh có nguồn từ OAI; không phải cohort độc lập và không đưa vào mô hình bảng bốn đặc trưng.",
+      "checked_date": "2026-11-11",
+      "version": 1
+    }
+  ],
+  "profiles": {
+    "matchthem": {
+      "name": "MatchThem · dữ liệu mô hình hiện tại",
+      "n": 2585,
+      "age": {
+        "valid_n": 2585,
+        "missing_n": 0,
+        "median": 68.0,
+        "min": 60.0,
+        "max": 79.0,
+        "edges": [
+          40.0,
+          45.0,
+          50.0,
+          55.0,
+          60.0,
+          65.0,
+          70.0,
+          75.0,
+          80.0,
+          85.0,
+          90.0
+        ],
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          763,
+          700,
+          686,
+          436,
+          0,
+          0
+        ]
+      },
+      "bmi": {
+        "valid_n": 2584,
+        "missing_n": 1,
+        "median": 28.1,
+        "min": 17.2,
+        "max": 48.7,
+        "edges": [
+          15.0,
+          20.0,
+          25.0,
+          30.0,
+          35.0,
+          40.0,
+          45.0,
+          50.0,
+          55.0
+        ],
+        "hist": [
+          36,
+          583,
+          1084,
+          646,
+          207,
+          26,
+          2,
+          0
+        ]
+      },
+      "source_outcome": {
+        "labels": [
+          "0.0",
+          "1.0"
+        ],
+        "counts": [
+          1197,
+          1195
+        ],
+        "valid_n": 2392,
+        "missing_n": 193
+      },
+      "outcome_title": "KOA theo dõi · nhãn 0/1 của nguồn",
+      "column_count_original": 7,
+      "missing": {
+        "bmi": 1,
+        "rac": 2,
+        "smk": 28,
+        "koa": 193,
+        "bmi_clean": 1
+      },
+      "source_columns": [
+        "age",
+        "sex",
+        "bmi",
+        "rac",
+        "smk",
+        "osp",
+        "koa"
+      ],
+      "training_eligible": true,
+      "quality_notes": [
+        "Dữ liệu dẫn xuất OAI có chỉnh sửa; nhãn 0 = at risk, nhãn 1 = diagnosed.",
+        "SEX chưa xác minh cách mã hóa; không dùng trong mô hình.",
+        "Không gộp với OAI hoặc các bản OAI khác khi chưa kiểm tra trùng người.",
+        "Mô hình hiện chỉ học từ 2.392 hồ sơ có nhãn trong nguồn này."
+      ]
+    },
+    "clinical72": {
+      "name": "Knee OA 72 · lâm sàng và xét nghiệm",
+      "n": 72,
+      "age": {
+        "valid_n": 72,
+        "missing_n": 0,
+        "median": 68.0,
+        "min": 48.0,
+        "max": 85.0,
+        "edges": [
+          40.0,
+          45.0,
+          50.0,
+          55.0,
+          60.0,
+          65.0,
+          70.0,
+          75.0,
+          80.0,
+          85.0,
+          90.0
+        ],
+        "hist": [
+          0,
+          2,
+          2,
+          6,
+          12,
+          17,
+          12,
+          15,
+          3,
+          3
+        ]
+      },
+      "bmi": {
+        "valid_n": 71,
+        "missing_n": 1,
+        "median": 26.0,
+        "min": 20.0,
+        "max": 44.9,
+        "edges": [
+          15.0,
+          20.0,
+          25.0,
+          30.0,
+          35.0,
+          40.0,
+          45.0,
+          50.0,
+          55.0
+        ],
+        "hist": [
+          0,
+          29,
+          23,
+          18,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "source_outcome": {
+        "labels": [
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0",
+          "3.5",
+          "4.0"
+        ],
+        "counts": [
+          5,
+          3,
+          32,
+          7,
+          19,
+          5,
+          1
+        ],
+        "valid_n": 72,
+        "missing_n": 0
+      },
+      "outcome_title": "RAD SCORE · giá trị nguồn, có số thập phân",
+      "column_count_original": 49,
+      "missing": {
+        "smoker": 1,
+        "local": 2,
+        "chprot": 2,
+        "infiltr": 3,
+        "cv": 3,
+        "wbc": 11,
+        "n_l": 11,
+        "mono": 11,
+        "siri": 11,
+        "hgb": 11,
+        "egfr": 10,
+        "plt": 11,
+        "tsh": 13,
+        "uric": 12,
+        "bmi_clean": 1
+      },
+      "source_columns": [
+        "gender",
+        "age",
+        "gonalgia",
+        "crepit",
+        "sens",
+        "pro_os",
+        "edema",
+        "hiperem",
+        "limital",
+        "coxalg",
+        "dis_hist",
+        "displaz",
+        "prf_ssol",
+        "trauma",
+        "smoker",
+        "alc",
+        "bmi",
+        "obez",
+        "local",
+        "antalg",
+        "nsaids",
+        "chprot",
+        "infiltr",
+        "cv",
+        "hta",
+        "bmd_cat",
+        "bmd_gr",
+        "dm",
+        "tir",
+        "rad_score",
+        "vas",
+        "kofus",
+        "womac",
+        "wbc",
+        "n_l",
+        "mono",
+        "siri",
+        "hgb",
+        "egfr",
+        "plt",
+        "crp",
+        "tsh",
+        "uric",
+        "dkk_1",
+        "sclr",
+        "opg",
+        "rankl",
+        "o_r"
+      ],
+      "training_eligible": false,
+      "quality_notes": [
+        "Loại 2 dòng lặp tiêu đề/chú giải; giữ đủ 72 dòng có tuổi dạng số.",
+        "Bỏ PATIENT ID khỏi bản nghiên cứu được chia sẻ; source_record_key chỉ là số dòng nội bộ.",
+        "1 BMI bằng 0 được giữ trong cột bmi, để trống trong bmi_clean.",
+        "RAD SCORE có 1.5, 2.5, 3.5; không làm tròn hoặc đổi thành nhãn KOA 0/1.",
+        "OBEZ có mã 2 dù chú giải chỉ nêu 0/1; DIS HIST có giá trị lớn hơn 1 dù chú giải nêu nhị phân. Giữ mã gốc, chưa diễn giải.",
+        "Dữ liệu cắt ngang ở người đã mắc OA; không có cùng kết cục theo dõi với MatchThem."
+      ],
+      "extra_numeric": {
+        "vas": {
+          "valid_n": 72,
+          "missing_n": 0,
+          "median": 4.0,
+          "min": 2.0,
+          "max": 8.0,
+          "edges": [
+            2.0,
+            2.6000001,
+            3.2000002,
+            3.8000002999999998,
+            4.4000004,
+            5.0000005,
+            5.6000005999999996,
+            6.2000006999999995,
+            6.800000799999999,
+            7.400000899999999,
+            8.000001
+          ],
+          "hist": [
+            8,
+            9,
+            0,
+            23,
+            16,
+            0,
+            11,
+            0,
+            3,
+            2
+          ]
+        },
+        "womac": {
+          "valid_n": 72,
+          "missing_n": 0,
+          "median": 26.0,
+          "min": 5.0,
+          "max": 48.0,
+          "edges": [
+            5.0,
+            9.3000001,
+            13.6000002,
+            17.900000300000002,
+            22.2000004,
+            26.5000005,
+            30.8000006,
+            35.1000007,
+            39.4000008,
+            43.7000009,
+            48.000001
+          ],
+          "hist": [
+            4,
+            5,
+            11,
+            10,
+            8,
+            6,
+            11,
+            11,
+            4,
+            2
+          ]
+        }
+      },
+      "non_numeric_cells_converted_to_missing": {}
+    },
+    "rct247": {
+      "name": "Knee OA RCT · 247 hồ sơ",
+      "n": 247,
+      "age": {
+        "valid_n": 247,
+        "missing_n": 0,
+        "median": 59.0,
+        "min": 45.0,
+        "max": 70.0,
+        "edges": [
+          40.0,
+          45.0,
+          50.0,
+          55.0,
+          60.0,
+          65.0,
+          70.0,
+          75.0,
+          80.0,
+          85.0,
+          90.0
+        ],
+        "hist": [
+          0,
+          41,
+          30,
+          60,
+          61,
+          47,
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "bmi": {
+        "valid_n": 247,
+        "missing_n": 0,
+        "median": 25.56,
+        "min": 19.95,
+        "max": 29.76,
+        "edges": [
+          15.0,
+          20.0,
+          25.0,
+          30.0,
+          35.0,
+          40.0,
+          45.0,
+          50.0,
+          55.0
+        ],
+        "hist": [
+          2,
+          104,
+          141,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "source_outcome": {
+        "labels": [
+          "1",
+          "2"
+        ],
+        "counts": [
+          103,
+          144
+        ],
+        "valid_n": 247,
+        "missing_n": 0
+      },
+      "outcome_title": "Kellgren–Lawrence · độ 1 và 2 trong nguồn",
+      "column_count_original": 34,
+      "missing": {
+        "ppt_post": 1
+      },
+      "source_columns": [
+        "group",
+        "age",
+        "gender",
+        "body_mass_index_bmi",
+        "kellgren_lawrence_grade",
+        "symptoms_duration_months",
+        "symptoms_side",
+        "previous_fall_episode",
+        "cci_charlson_comorbidity_index",
+        "work_status",
+        "nprs_pre",
+        "nprs_post",
+        "ppt_pre",
+        "ppt_post",
+        "womac_pain_pre",
+        "womac_pain_post",
+        "womac_stiffness_pre",
+        "womac_stiffness_post",
+        "womac_function_pre",
+        "womac_function_post",
+        "womac_total_pre",
+        "womac_total_post",
+        "muscle_strength_knee_flexion_pre",
+        "muscle_strength_knee_flexion_post",
+        "muscle_strength_knee_extension_pre",
+        "muscle_strength_knee_extension_post",
+        "rom_knee_flexion_pre",
+        "rom_knee_flexion_post",
+        "rom_knee_extension_pre",
+        "rom_knee_extension_post",
+        "six_minute_walk_test_pre",
+        "six_minute_walk_test_post",
+        "sf36_pre",
+        "sf36_post"
+      ],
+      "training_eligible": false,
+      "quality_notes": [
+        "247 dòng trong file thử nghiệm; chưa có mã người tham gia để kiểm chứng độc lập theo người.",
+        "Không tự gán ý nghĩa nhóm Group, giới tính hoặc bên gối khi chưa có protocol/codebook.",
+        "Chỉ quan sát độ KL 1 và 2; không có cùng nhãn koa_followup 0/1.",
+        "Các cột Pre/Post thuộc bối cảnh can thiệp; không dùng Post để dự đoán kết quả ban đầu.",
+        "Chưa đủ mô tả protocol để suy luận hiệu quả điều trị hoặc tính tỷ lệ mắc bệnh."
+      ],
+      "extra_numeric": {
+        "nprs_pre": {
+          "valid_n": 247,
+          "missing_n": 0,
+          "median": 8.0,
+          "min": 5.0,
+          "max": 10.0,
+          "edges": [
+            5.0,
+            5.5000001,
+            6.0000002,
+            6.5000003,
+            7.000000399999999,
+            7.5000005,
+            8.0000006,
+            8.5000007,
+            9.000000799999999,
+            9.5000009,
+            10.000001
+          ],
+          "hist": [
+            3,
+            9,
+            0,
+            32,
+            0,
+            157,
+            0,
+            44,
+            0,
+            2
+          ]
+        },
+        "womac_total_pre": {
+          "valid_n": 247,
+          "missing_n": 0,
+          "median": 56.0,
+          "min": 39.0,
+          "max": 67.0,
+          "edges": [
+            39.0,
+            41.8000001,
+            44.6000002,
+            47.4000003,
+            50.2000004,
+            53.0000005,
+            55.8000006,
+            58.600000699999995,
+            61.4000008,
+            64.20000089999999,
+            67.000001
+          ],
+          "hist": [
+            4,
+            8,
+            15,
+            29,
+            35,
+            27,
+            46,
+            29,
+            34,
+            20
+          ]
+        }
+      }
+    },
+    "carepathways": {
+      "name": "KOA Care Pathways · Thụy Sĩ",
+      "n": 1410,
+      "age": {
+        "valid_n": 1410,
+        "missing_n": 0,
+        "median": 68.0,
+        "min": 35.0,
+        "max": 91.0,
+        "edges": [
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "hist": [
+          5,
+          8,
+          28,
+          60,
+          147,
+          198,
+          333,
+          282,
+          208,
+          111,
+          27,
+          3
+        ]
+      },
+      "bmi": {
+        "valid_n": 0,
+        "missing_n": 1410,
+        "median": null,
+        "min": null,
+        "max": null,
+        "edges": [
+          10,
+          70
+        ],
+        "hist": [
+          0
+        ]
+      },
+      "source_outcome": {
+        "labels": [
+          "Chương trình GLA:D",
+          "Nhóm thay khớp gối",
+          "Chăm sóc bảo tồn cá thể"
+        ],
+        "counts": [
+          1318,
+          55,
+          37
+        ],
+        "valid_n": 1410,
+        "missing_n": 0
+      },
+      "outcome_title": "Nhóm chăm sóc trong khảo sát",
+      "column_count_original": 139,
+      "missing": {
+        "duration_sy_to_diag": 67
+      },
+      "training_eligible": false,
+      "quality_notes": [
+        "Khảo sát cắt ngang tại Thụy Sĩ ở người đã được chẩn đoán thoái hóa khớp gối.",
+        "Bộ dữ liệu nguồn có 1.410 dòng, 139 cột và không thu thập BMI.",
+        "Khoảng thời gian từ triệu chứng tới chẩn đoán có 54 giá trị âm và 67 ô thiếu. Biến này chưa dùng cho biểu đồ.",
+        "Giá trị None là không nhận cả hai hình thức tập luyện và giáo dục; giữ là một nhóm có nghĩa."
+      ]
+    }
+  },
+  "counts": {
+    "downloaded_sources": 4,
+    "new_source_rows": 1729,
+    "source_rows_total": 4314
+  },
+  "count_note": "Có 4.314 dòng tính theo nguồn, gồm 1.729 dòng ngoài MatchThem. Số người duy nhất giữa các nguồn chưa được xác minh.",
+  "training_note": "Mô hình phân loại dùng 2.392 hồ sơ có nhãn của MatchThem. Ba nguồn còn lại phục vụ phân tích mô tả."
+}
